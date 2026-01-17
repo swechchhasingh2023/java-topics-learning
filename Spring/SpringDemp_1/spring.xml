@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+          
+          
+          
+          <!-- Primary -->
+          
+           <bean id="alien" class="com.swechchha.SpringDemp_1.Alien" autowire="byType">
+          	<property name='age' value="15"></property>
+          </bean>
+          <bean id="com" class="com.swechchha.SpringDemp_1.Laptop"></bean> 
+           <bean id="desktop" class="com.swechchha.SpringDemp_1.Desktop"  primary="true">
+          </bean>
+          
+          <!-- byType -->
+<!--          
+           <bean id="alien" class="com.swechchha.SpringDemp_1.Alien" autowire="byType">
+          	<property name='age' value="15"></property>
+          </bean>
+          <bean id="com" class="com.swechchha.SpringDemp_1.Laptop"></bean>  
+          </bean>
+-->            
+          
+           <!-- byName -->
+ <!--            
+           <bean id="alien" class="com.swechchha.SpringDemp_1.Alien" autowire="byName">
+          	<property name='age' value="15"></property>
+          </bean>
+          <bean id="com" class="com.swechchha.SpringDemp_1.Laptop"></bean> 
+           <bean id="desktop" class="com.swechchha.SpringDemp_1.Desktop">
+          </bean>
+          
+   -->        
+          
+ <!--              
+		<bean id="alien" class="com.swechchha.SpringDemp_1.Alien">
+          	<property name='age' value="15"></property>
+          	<property name="com" ref="com"></property>
+          </bean>
+          <bean id="com" class="com.swechchha.SpringDemp_1.Laptop"></bean> 
+ -->
+          
+<!--        to show both laptop and dektop is working after giveing there references -->
+ <!--     <bean id="alien" class="com.swechchha.SpringDemp_1.Alien" >
+           <property name="age" value="10"></property>
+          	<property name="com" ref="desktop"></property>
+          </bean>
+          
+          <bean id="laptop" class="com.swechchha.SpringDemp_1.Laptop">
+          </bean>
+           <bean id="desktop" class="com.swechchha.SpringDemp_1.Desktop">
+          </bean>
+-->
+          
+         <!-- Constructor Injection -->
+<!--            <bean id="alien" class="com.swechchha.SpringDemp_1.Alien">
+         <constructor-arg value="19"></constructor-arg>
+         	<property name="lap" ref="lap"></property>
+         </bean>
+          <bean id="lap" class="com.swechchha.SpringDemp_1.Laptop" scope="prototype">
+         	  <property name="Pen" ref="Pen"></property>
+          </bean>
+          <bean id="Pen" class="com.swechchha.SpringDemp_1.Pen" scope="prototype"> 
+          </bean>
+-->
+          
+          <!-- Setter Injection -->
+<!--          <bean id="alien" scope="prototype" class="com.swechchha.SpringDemp_1.Alien">
+          <property name="age" value="10"></property>
+          <property name="Laptop" ref="Laptop"></property>
+          </bean>
+          
+          <bean id="Laptop" class="com.swechchha.SpringDemp_1.Laptop" scope="prototype">
+         	 <property name="Pen" ref="Pen"></property>
+          </bean>
+          
+           <bean id="Pen" class="com.swechchha.SpringDemp_1.Pen" scope="prototype"> 
+          </bean> 
+-->
+         
+          
+          <!-- Setter Injection -->
+<!--  	   
+		 <bean id="alien" scope="prototype" class="com.swechchha.SpringDemp_1.Alien">
+         	 <property name="age" value="10"></property>
+          </bean>  
+-->
+          
+<!-- Scope scope :  1- Singleton(by default) 2- Prototype-->  
+       
+<!--	
+		 <bean id="alien" class="com.swechchha.SpringDemp_1.Alien" scope="singleton"/> 
+-->
+<!--     
+		 <bean id="alien" class="com.swechchha.SpringDemp_1.Alien" scope="prototype"/> 
+-->
+
+</beans>
+
+<!--  
+	<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+          
+		<bean id="alien" class="com.swechchha.SpringDemp_1.Alien"/>
+
+</beans> 
+-->
